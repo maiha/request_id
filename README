@@ -7,17 +7,31 @@ Rails plugin that adds a new method (Controller#request_id) to distinguish reque
 Methods
 =======
 
-ActionController::Base#request_id
+* ActionController::Base#request_id
+
+  => "3000:1"   # request_id_with_port is true
+  => "1"        # request_id_with_port is false
+
+
+Configurations
+==============
+
+* ActionController::Base.request_id_with_port
+
+  Indicates whether request_id needs port number or not.
+  It is useful under clustered servers. This is true, by default.
 
 
 Log
 ===
 
-Processing UserController#index (for 127.0.0.1 at 2008-11-16 21:30:00) [GET]
-  Request ID: 1 (port:3000)
-  Session ID: 2e324cf7ff9737194a07911cdbf323b0
-  Parameters: {"action"=>"index", "controller"=>"user"}
+* Request ID field is automatically added into log file
 
+Processing UserController#index (for 127.0.0.1 at 2008-11-16 21:30:00) [GET]
+  Request ID: 3000:1
+
+Processing UserController#index (for 127.0.0.1 at 2008-11-16 21:30:05) [GET]
+  Request ID: 3000:2
 
 
 Copyright (c) 2008 maiha@wota.jp, released under the MIT license
