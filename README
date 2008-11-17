@@ -34,4 +34,13 @@ Processing UserController#index (for 127.0.0.1 at 2008-11-16 21:30:05) [GET]
   Request ID: 3000:2
 
 
+Note
+====
+
+* request_id is reset when the server restarts
+
+* backend_port is used as port number only on Mongrel server, otherwise frontend_port is used.
+  Anyone know how to detect backend port number on Lighttpd, WEBrick and Thin?
+
+
 Copyright (c) 2008 maiha@wota.jp, released under the MIT license
