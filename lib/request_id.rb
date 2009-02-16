@@ -38,6 +38,8 @@ module RequestId
       else
         nil
       end
+    rescue => error
+      logger.error "[request_id] backend_port error: #{error}" if logger
     end
 
   module Rails1x

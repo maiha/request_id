@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = "request_id"
-  s.version = "0.1"
-  s.date = "2008-11-16"
+  s.version = "0.1.1"
+  s.date = "2009-02-16"
   s.summary = ""
   s.email = "maiha@wota.jp"
   s.homepage = "http://github.com/maiha/request_id"
